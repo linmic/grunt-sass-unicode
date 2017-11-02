@@ -35,6 +35,8 @@ grunt.initConfig({
     },
   },
 });
+
+grunt.registerTask('default', ['sass', 'sassUnicode']);
 ```
 
 ## Contributing
