@@ -25,13 +25,20 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-sass-unicode');
 ```
 
-### Usage Example
+### Usage Example with grunt-sass
 
 ```js
 grunt.initConfig({
+  sass: {
+    dist: {
+      files: {
+        './dist/main.css': './src/main.scss'
+      }
+    }
+  },
   sassUnicode: {
     files: {
-      'main.css': 'main.css',
+      './dist/main.css': './dist/main.css',
     },
   },
 });
