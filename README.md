@@ -2,7 +2,7 @@
 
 > This is to solve unicode issue with SASS.
 
-This is heavily inspired by [gulp-sass-unicode](https://github.com/Perkovec/gulp-sass-unicode/blob/master/index.js), the only reason I do this is offering guys using grunt have a solution for the [unicode issue](https://github.com/sass/sass/issues/1395) with SASS.
+This is heavily inspired by [gulp-sass-unicode](https://github.com/perkovec/gulp-sass-unicode), the only reason I do this is offering guys using grunt have a solution for the [unicode issue](https://github.com/sass/sass/issues/1395) with SASS.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
