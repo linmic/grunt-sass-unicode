@@ -4,6 +4,22 @@
 
 This is heavily inspired by [gulp-sass-unicode](https://github.com/Perkovec/gulp-sass-unicode/blob/master/index.js), the only reason I do this is offering guys using grunt have a solution for the [unicode issue](https://github.com/sass/sass/issues/1395) with SASS.
 
+## Intend to solve
+
+You might encounter an issue that you need to generate a css file with SASS and a custom font, and it turns into something like this:
+
+```scss
+content: "口";
+```
+
+when it should be something like this:
+
+```scss
+content: '\f101';
+```
+
+This plugin is just about replacing the broken characters inside `content` value with the correct ones.
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
@@ -27,6 +43,8 @@ grunt.loadNpmTasks('grunt-sass-unicode');
 
 ### Usage Example with grunt-sass
 
+This plugin follows [files object format](https://gruntjs.com/configuring-tasks#files-object-format), where the *property name* is the **destination file**, and its *value* is the **source**.
+
 ```js
 grunt.initConfig({
   sass: {
@@ -47,7 +65,8 @@ grunt.registerTask('default', ['sass', 'sassUnicode']);
 ```
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+Lint and test your code before submitting your contribution.
 
 ## License
 
